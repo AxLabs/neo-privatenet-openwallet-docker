@@ -6,7 +6,7 @@ This is very convenient when performing integration tests, since it's not possib
 
 This docker image is maintained by [AxLabs](https://axlabs.com).
 
-# Usage
+## Usage
 
 Just pull and run it:
 
@@ -81,7 +81,7 @@ $ curl --data-binary '{"jsonrpc": "2.0", "id":"curltest", "method": "getaccounts
 {"jsonrpc": "2.0", "id": "curltest", "result": {"version": 0, "address": "AK2nJJpJr6o664CWJKi1QRXjqeic2zRp8y", "script_hash": "e9eed8dc39332032dc22e5d6e86332c50327ba23", "frozen": false, "votes": [], "balances": {"0xc56f33fc6ecfcd0c225c4ab356fee59390af8560be0e930faebe74a6daff7c9b": "99999990.0", "0x602c79718b16e442de58778e148d0b1084e3b2dffd5de6b7b16cee7969282de7": "16024.0"}}}
 ```
 
-# Build the image yourself
+## Build the image yourself
 
 Clone the repository and build:
 
