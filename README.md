@@ -1,6 +1,6 @@
 # neo-privatenet-openwallet-docker
 
-This docker image is based on the CityOfZion (neo-privatenet-docker)[https://github.com/CityOfZion/neo-privatenet-docker/], but with an unlocked wallet (address `AK2nJJpJr6o664CWJKi1QRXjqeic2zRp8y`) with plenty of NEO and GAS -- which can be accessed through the JSON-RPC on port 30337.
+This docker image is based on the CityOfZion [neo-privatenet-docker](https://github.com/CityOfZion/neo-privatenet-docker/), but with an unlocked wallet (address `AK2nJJpJr6o664CWJKi1QRXjqeic2zRp8y`) with plenty of NEO and GAS -- which can be accessed through the JSON-RPC on port 30337.
 
 This is very convenient when performing integration tests, since it's not possible to import *and* unlock wallets through the JSON-RPC interface. Thus, this image is pretty handy when using some JSON-RPC methods (e.g., `getnewaddress`, `sendtoaddress`, or `sendmany`) that requires an unlocked wallet.
 
