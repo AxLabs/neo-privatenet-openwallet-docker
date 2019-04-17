@@ -8,12 +8,31 @@ This docker image is maintained by [AxLabs](https://axlabs.com).
 
 ## Usage
 
+Basically, you have two options:
+
+1. Use the `axlabs/neo-privatenet-openwallet-docker` image (standalone), which exposes the JSON-RPC ports;
+2. Or, use the docker-compose command that runs the `axlabs/neo-privatenet-openwallet-docker` image as well as with `slipoh/neo-scan` image, which provides the nice neo-scan Web interface.
+
+### Option 1 (standalone):
+
 Just pull and run it:
 
 ```
 $ docker pull axlabs/neo-privatenet-openwallet-docker
 $ docker run --rm -d --name neo-privatenet -p 20333-20336:20333-20336/tcp -p 30333-30337:30333-30337/tcp axlabs/neo-privatenet-openwallet-docker
 ```
+
+### Option 2 (with neo-scan):
+
+```
+$ git clone https://github.com/AxLabs/neo-privatenet-openwallet-docker.git
+$ cd neo-privatenet-openwallet-docker
+$ docker-compose up
+```
+
+After a while, neo-scan will be available at `http://localhost:4000`.
+
+### Examples: JSON-RPC calls
 
 To check if the privatenet is already running, run the following command to list all addresses on the unlocked wallet:
 
