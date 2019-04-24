@@ -28,7 +28,7 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
   neo-privnet:
-    image: axlabs/neo-privatenet-openwallet-docker
+    image: axlabs/neo-privatenet-openwallet-docker:latest
     hostname: neo-privnet
     ports:
       - 20333:20333
