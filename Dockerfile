@@ -1,14 +1,16 @@
-FROM cityofzion/neo-privatenet:2.8.0
+FROM cityofzion/neo-privatenet:2.9.1
 
 LABEL maintainer="AxLabs (https://axlabs.com)"
 LABEL authors="gsmachado"
 
 WORKDIR /neo-python
 
-ADD ./scripts/open-wallet.sh /opt/
+ADD ./scripts/neo-python_jsonrpc_run.sh /opt/
+COPY ./scripts/protocol.privnet.json /neo-python/neo/data/protocol.privnet.json
 
-RUN rm -rf /root/.neopython/Chains/privnet*
-RUN chmod u+x /opt/open-wallet.sh
-RUN sed -i '/sleep infinity/i \screen -dmS open-wallet expect /opt/open-wallet.sh /neo-python/neo-privnet.wallet coz \nscreen -S open-wallet -X stuff "coz^M"' /opt/run.sh
+RUN rm -rf /root/.neopython/*
+RUN chmod u+x /opt/neo-python_jsonrpc_run.sh
+RUN sed -i '/sleep infinity/i \screen -dmS neo-python expect /opt/neo-python_jsonrpc_run.sh /neo-python/neo-privnet.wallet \nscreen -S neo-python -X stuff "coz^M" \nscreen -S node1 -X stuff "import key KxDgvEKzgSBPPfuVfw67oPQBSjidEiqTHURKSDL1R7yGaGYAeYnr^M" \nscreen -S node1 -X stuff "rebuild index^M"' /opt/run.sh
+RUN sed -i '/^expect\s\"neo>\"$/d' /opt/start_consensus_node.sh
 
 EXPOSE 30337
