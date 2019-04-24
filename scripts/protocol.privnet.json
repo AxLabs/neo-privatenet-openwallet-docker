@@ -15,7 +15,7 @@
       "neo-privnet:20336"
     ],
     "RPCList": [
-      "http://127.0.0.1:30333"
+      "http://neo-privnet:30333"
     ],
     "SystemFee": {
       "EnrollmentTransaction": 1000,
