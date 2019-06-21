@@ -25,17 +25,18 @@
     }
   },
   "ApplicationConfiguration": {
-    "DataDirectoryPath": "Chains/privnet",
-    "NotificationDataPath": "Chains/privnet_notif",
-    "RPCPort": 30337,
-    "NodePort": 20337,
-    "WsPort": 10337,
+    "DataDirectoryPath": "Chains/privnet-2",
+    "NotificationDataPath": "Chains/privnet-2_notif",
+    "RPCPort": 30338,
+    "NodePort": 20338,
+    "WsPort": 10338,
     "UriPrefix": [
-      "http://*:30337"
+      "http://*:30338"
     ],
     "SslCert": "",
     "SslCertPassword": "",
-    "BootstrapFile": "",
+    "BootstrapName": "privatenet",
+    "BootstrapFiles": [""],
     "NotificationBootstrapFile": "",
     "DebugStorage": 1,
     "AcceptIncomingPeers": false,
