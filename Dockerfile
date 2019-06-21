@@ -1,4 +1,4 @@
-FROM cityofzion/neo-privatenet:2.9.1
+FROM axlabs/neo-privatenet:2.10.2
 
 LABEL maintainer="AxLabs (https://axlabs.com)"
 LABEL authors="gsmachado"
