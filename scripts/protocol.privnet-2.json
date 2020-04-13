@@ -9,13 +9,13 @@
       "02a7bc55fe8684e0119768d104ba30795bdcc86619e864add26156723ed185cd62"
     ],
     "SeedList": [
-      "neo-privnet:20333",
-      "neo-privnet:20334",
-      "neo-privnet:20335",
-      "neo-privnet:20336"
+      "neo-consensus:20333",
+      "neo-consensus:20334",
+      "neo-consensus:20335",
+      "neo-consensus:20336"
     ],
     "RPCList": [
-      "http://neo-privnet:30333"
+      "http://neo-consensus:30333"
     ],
     "SystemFee": {
       "EnrollmentTransaction": 1000,
@@ -27,11 +27,11 @@
   "ApplicationConfiguration": {
     "DataDirectoryPath": "Chains/privnet-2",
     "NotificationDataPath": "Chains/privnet-2_notif",
-    "RPCPort": 30338,
-    "NodePort": 20338,
-    "WsPort": 10338,
+    "RPCPort": 30334,
+    "NodePort": 20334,
+    "WsPort": 10334,
     "UriPrefix": [
-      "http://*:30338"
+      "http://*:30334"
     ],
     "SslCert": "",
     "SslCertPassword": "",
