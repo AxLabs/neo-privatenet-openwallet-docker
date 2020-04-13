@@ -4,7 +4,7 @@ services:
 
   neo-postgres:
     image: postgres:12-alpine
-    hostname: postgres
+    hostname: neo-postgres
     container_name: neo-postgres
     ports:
       - 5432:5432
@@ -15,14 +15,14 @@ services:
     restart: always
 
   neo-scan:
-    container_name: neo-scan
+    hostname: neo-scan
     container_name: neo-scan
     depends_on:
       - neo-postgres
       - neo-consensus
     environment:
       DB_DATABASE: neoscan_prodv
-      DB_HOSTNAME: postgres
+      DB_HOSTNAME: neo-postgres
       DB_PASSWORD: postgres
       DB_USERNAME: postgres
       NEO_SEEDS: >-
